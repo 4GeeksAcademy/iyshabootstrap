@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Photo Feed</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .navbar-brand {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .feed-container {
+            padding-top: 2rem;
+        }
+
+        .photo-card {
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .post-header, .post-footer {
+            padding: 10px;
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .post-footer {
+            border-bottom: none;
+        }
+
+        .post-header h5 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .post-header small {
+            color: #8e8e8e;
+        }
+
+        .post-footer h6 {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .post-footer p {
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+        }
+
+        .grid-layout img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+        }
+
+        .action-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .action-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            padding: 10px;
+        }
+
+        .action-bar .active {
+            color: #3897f0;
+        }
+
+        .btn-new-post {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .settings-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">Instagram</a>
+        <button class="btn btn-new-post">Create a new post</button>
+        <span class="settings-icon">&#9881;</span>
+    </nav>
+
+    <div class="container feed-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="photo-card">
+                    <div class="post-header d-flex justify-content-between align-items-center">
+                        <h5>My Crazy hacking part!</h5>
+                        <small>08/26</small>
+                    </div>
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.u-wO7AuEwgkuIWB0Tzdc6gHaE8&pid=Api&P=0&h=180" alt="Dog photo">
+                    <div class="post-footer">
+                        <h6>204 Likes</h6>
+                        <p>This picture is very interesting and fun to do</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action-bar">
+            <button class="active">&#9638;</button>
+            <button>&#9645;</button>
+        </div>
+        <div class="grid-layout mt-3">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.KDmaLuTWB86uxBfIQGGaRQHaEK&pid=Api&P=0&h=180" alt="Photo 1">
+            <img src="https://www.fundaciontelefonica.com/wp-content/uploads/2017/05/programacion-web-empleo-digital.jpg" alt="Photo 2">
+            <img src="https://www.digitalhouse.com/_next/image?url=https:%2F%2Fimages.prismic.io%2Fdh-frontend%2Fd41322ef-1988-40a7-8726-8ee674194ab5_pexels-thisisengineering-comprimida.jpg%3Fauto%3Dcompress%2Cformat&w=3840&q=75" alt="Photo 3">
+            <img src="https://nibiru.com.uy/img/blog/php1.jpg.jpeg" alt="Photo 4">
+            <img src="https://4.bp.blogspot.com/-u-lWDBpcdBk/XFPFben1vbI/AAAAAAAAFxM/tG5x_S_N6aIkDOOWuEJpyOhOzqVUbntvgCLcBGAs/s1600/352111-PAR7S3-904.jpg" alt="Photo 5">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.m5ruwLvSyHmCJrdvDYEbbwHaE7&pid=Api&P=0&h=180" alt="Photo 6">
+            <img src="https://i0.wp.com/static.vecteezy.com/system/resources/previews/001/311/814/non_2x/programming-and-coding-concept-vector.jpg?w=1290&ssl=1" alt="Photo 7">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.ilU3CoqmoBct_1o5IN3XPQHaEK&pid=Api&P=0&h=180" alt="Photo 8">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.ZpgvIfhL1xFnlmKZfCljhwHaD8&pid=Api&P=0&h=180" alt="Photo 9">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
